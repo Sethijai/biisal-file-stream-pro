@@ -21,7 +21,7 @@ MY_PASS = os.environ.get("MY_PASS", None)
 pass_dict = {}
 pass_db = Database(Var.DATABASE_URL, "ag_passwords")
 
-msg_text ="""<i><u>💖 𝚈𝚘𝚞𝚛 𝙼𝚘𝚟𝚒𝚎 / 𝚂𝚎𝚛𝚒𝚎𝚜 𝙻𝚒𝚗𝚔 💖</u></i>\n\n<b>📤 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i><b>🍿 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>\n<b> 🔗 File Link :</b> <i>{}</i>""" 
+msg_text ="""<i><u>💖 𝚈𝚘𝚞𝚛 𝙼𝚘𝚟𝚒𝚎 / 𝚂𝚎𝚛𝚒𝚎𝚜 𝙻𝚒𝚗𝚔 💖</u></i>\n\n<b>📤 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i>\n<b>🍿 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>\n\n<b> 🔗 File Link :</b> <i>{}</i>""" 
 
 @StreamBot.on_message((filters.private) & (filters.document | filters.video | filters.audio | filters.photo) , group=4)
 async def private_receive_handler(c: Client, m: Message):
